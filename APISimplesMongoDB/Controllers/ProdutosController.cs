@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace APISimplesMongoDB.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class ProdutosController : ControllerBase
 {
     private readonly ProdutoServices _produtoServices;

@@ -15,6 +15,8 @@ builder.Services.Configure<ProdutoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase")); 
 builder.Services.AddSingleton<ProdutoServices>();
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,6 +25,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseHttpsRedirection();
 
