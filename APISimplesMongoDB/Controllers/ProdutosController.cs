@@ -2,8 +2,6 @@ using APISimplesMongoDB.Models;
 using APISimplesMongoDB.Services;
 using Microsoft.AspNetCore.Mvc;
 
-//
-
 namespace APISimplesMongoDB.Controllers;
 
 [ApiController]
